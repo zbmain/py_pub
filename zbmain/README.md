@@ -6,7 +6,9 @@
 
 ## 安装说明
 
+    # 更新版本较慢
     pip install zbmain
+    pip install zbmain -i https://pypi.python.org/simple/
 
 
 ## 使用方法

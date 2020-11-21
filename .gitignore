@@ -125,6 +125,7 @@ __pycache__
 
 # Windows image file caches
 Thumbs.db
+*/Thumbs.db
 
 # Folder config file
 Desktop.ini
@@ -162,12 +163,26 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
-# Mac crap
-.DS_Store
+# Mac Win crap
 *.log
-test/tmp/*
+.DS_Store
+*/.DS_Store
+.DS_Store?
+*/.DS_Store?
+._*
+*/._*
+.Spotlight-V100
+*/.Spotlight-V100
+.Trashes
+*/.Trashes
+ehthumbs.db
+*/ehthumbs.db
 
 #jython
 *.class
 
 MANIFEST
+
+#zbmain
+ignore/
+command.md

@@ -1,18 +1,17 @@
 import setuptools
 
-with open("README.md","r") as fh:
+with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="zbmain",
-    version="0.0.2",
+    version="0.0.3",
     author="zhaobin",
     author_email="zbmain@qq.com",
-    description="public python library",
+    description="public library",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/zbmain/py_pub",
-    license="MIT",
     packages=setuptools.find_packages(),
     classifiers=[
          # 该软件包仅与Python3兼容
