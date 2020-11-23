@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="zbmain",
-    version="0.0.4",
+    version="0.0.5",
     author="zhaobin",
     author_email="zbmain@qq.com",
-    description="public library",
+    description="public python library",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/zbmain/py_pub",
@@ -21,6 +21,6 @@ setuptools.setup(
         # 与操作系统无关
         "Operating System :: OS Independent",
     ],
-    install_requies=[
-    ]
+    #.egg
+    # zip_safe = False
 )
