@@ -1,7 +1,6 @@
 #################
 ## Eclipse
 #################
-
 *.pydevproject
 .project
 .metadata
@@ -117,7 +116,9 @@ UpgradeLog*.XML
 ## pycharm
 ############
 .idea
+**/.idea
 __pycache__
+**/__pycache__
 
 ############
 ## Windows
@@ -166,17 +167,17 @@ pip-log.txt
 # Mac Win crap
 *.log
 .DS_Store
-*/.DS_Store
+**/.DS_Store
 .DS_Store?
-*/.DS_Store?
+**/.DS_Store?
 ._*
-*/._*
+**/._*
 .Spotlight-V100
-*/.Spotlight-V100
+**/.Spotlight-V100
 .Trashes
-*/.Trashes
+**/.Trashes
 ehthumbs.db
-*/ehthumbs.db
+**/ehthumbs.db
 
 #jython
 *.class
