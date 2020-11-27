@@ -4,14 +4,13 @@
 # @Time    : 2020/11/17 23:21
 # @Blog    : https://blog.zbmain.com
 
-import sys, os
-
-__common_data_path = len(sys.argv) > 1 and sys.argv[1] == '0' and '/home/common/' or '/Users/common/'
+import platform
+import os
+sys_ = platform.system().lower()
+__common_data_path = sys_ == 'linux' and '/home/common/' or sys_ == 'darwin' and '/Users/common/' or '/user/common/'
 '''
-    Mac Win|Linux运行环境下数据文件绝对路径地址切换方法
-    使用方法:
-    - python xx.py -> /Users/common/  >> [Mac|Win]
-    - python xx.py 0 -> /home/common/  >> [Linux]
+    Mac Win|Linux运行环境下数据文件绝对路径地址
+    [Mac|Win|Linux]
     - os.path.join(__common_data_path,file_path)
 '''
 
@@ -26,5 +25,5 @@ def __join(filepath):
     return os.path.join(__common_data_path, filepath)
 
 
-if __name__ == '':
+if __name__ == '__main__':
     print(__join('main.py'))
