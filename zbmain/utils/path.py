@@ -6,12 +6,13 @@
 
 import platform
 import os
+
 sys_ = platform.system().lower()
-__common_data_path = sys_ == 'linux' and '/home/common/' or sys_ == 'darwin' and '/Users/common/' or '/user/common/'
+__common_data_path = sys_ == 'linux' and '/home/common/' or sys_ == 'darwin' and '/Users/common/' or 'C:\\Users/common/'
 '''
-    Mac Win|Linux运行环境下数据文件绝对路径地址
-    [Mac|Win|Linux]
-    - os.path.join(__common_data_path,file_path)
+    Linux|Mac|Win 运行环境下数据文件绝对路径地址
+    [Linux|Mac|Win]
+    .__join()
 '''
 
 

@@ -7,7 +7,6 @@ import argparse
 
 parser = argparse.ArgumentParser()
 # ----set argument----
-parser.add_argument("-t","--do_train", action='store_true', default=False, help="Whether to run training.")
-
+parser.add_argument("-t","--train", action='store_true', default=False, help="Whether to run training.")
 # ----set end----
 args = parser.parse_args()
