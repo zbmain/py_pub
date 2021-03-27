@@ -187,3 +187,5 @@ MANIFEST
 #zbmain
 ignore/
 /test.py
+del.sh
+del.command

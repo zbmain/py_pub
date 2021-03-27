@@ -5,7 +5,6 @@
 # @Blog    : https://blog.zbmain.com
 
 
-def write(char,filepath = 'tmp.txt',mode='w'):
-    with open(filepath,mode) as file:
-            file.write(str(char)+"\n")
-
+def write(char, filepath='tmp.txt', mode='w'):
+    with open(filepath, mode) as file:
+        file.write(str(char) + "\n")

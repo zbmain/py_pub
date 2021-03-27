@@ -7,16 +7,18 @@
 import platform
 import os
 
+# 自动判断当前系统环境
 sys_ = platform.system().lower()
+# 获取公共数据路径
 __common_data_path = sys_ == 'linux' and '/home/common/' or sys_ == 'darwin' and '/Users/common/' or 'C:\\Users/common/'
 '''
     Linux|Mac|Win 运行环境下数据文件绝对路径地址
     [Linux|Mac|Win]
-    .__join()
+    ._join()
 '''
 
 
-def __join(filepath):
+def _join(filepath):
     '''
     绝对数据路径拼接
 
@@ -27,4 +29,4 @@ def __join(filepath):
 
 
 if __name__ == '__main__':
-    print(__join('main.py'))
+    print(_join('main.py'))

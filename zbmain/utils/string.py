@@ -10,8 +10,8 @@ NUM = '0-9'
 LETTERS = 'a-zA-Z'
 NORMAL_CHAR = '!,.?！，。？'
 SPECIAL_CHAR = '’"#$%&\'()*+-/;；<=>@★☆〇〖〗、【】＜＞《》“”‘’\\[\\\\]^_`{|}~'
-CN_Unicode = '\u4E00-\u9FA5'#中文
-CN_Unicdoe2 = '\u4E00-\u9FEF'#中文2
+CN_Unicode = '\u4E00-\u9FA5'  # 中文
+CN_Unicdoe2 = '\u4E00-\u9FEF'  # 中文2
 
 
 def clearNull(char: str):
@@ -28,5 +28,5 @@ def replaces(char: str, *regs, end=''):
 
 if __name__ == "__main__":
     print(clearNull('123 abc 你好，世界！'))
-    print(replaces('123 abc\你好\\世界！', NUM,LETTERS, NORMAL_CHAR, SPECIAL_CHAR, end='X'))
-    print(replaces('123 @abc\你好，\n\世界！', '^',CN_Unicode,',，!！\n\0x0D\0x0A\u3000\u0020', end=''))
+    print(replaces('123 abc\你好\\世界！', NUM, LETTERS, NORMAL_CHAR, SPECIAL_CHAR, end='X'))
+    print(replaces('123 @abc\你好，\n\世界！', '^', CN_Unicode, ',，!！\n\0x0D\0x0A\u3000\u0020', end=''))

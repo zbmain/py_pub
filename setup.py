@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="zbmain",
-    version="0.0.6",
+    version="0.0.9",
     author="zhaobin",
     author_email="zbmain@qq.com",
     description="public python library",
@@ -22,5 +22,5 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     #.egg
-    # zip_safe = False
+    zip_safe = True
 )

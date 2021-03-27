@@ -4,38 +4,14 @@
 # @Time    : 2020/11/14 16:37
 # @Blog    : https://blog.zbmain.com
 
+from zbmain.utils import config
 import hashlib
 import http.client
 import json
 import random
 import urllib
-from urllib.request import urlopen
-__all__ = ['__getBaiduTranslateConfigFromJson','BaiduTranslate','YoudaoTranslate','GoogleTranslate']
 
-def __getBaiduTranslateConfigFromJson(configUrl=''):
-    '''
-    json格式：
-    {
-        "translate":{
-            "baidu":{
-                "appid":"",
-                "secretKey":""
-            },
-            "google":{
-                "appid":"",
-                "secretKey":""
-            },"youdao":{
-                "appid":"",
-                "secretKey":""
-            }
-        }
-    }
-    :param configUrl:
-    :return:
-    '''
-    configJSON = configUrl or 'https://zbmain.com/files/others/config.json'
-    resultJSON = json.loads(urlopen(configJSON).read())
-    return resultJSON['translate']['baidu']['appid'], resultJSON['translate']['baidu']['secretKey']
+__all__ = ['BaiduTranslate', 'YoudaoTranslate', 'GoogleTranslate']
 
 
 class BaiduTranslate():
@@ -97,6 +73,6 @@ class GoogleTranslate():
 
 
 if __name__ == "__main__":
-    appid, secretKey = __getBaiduTranslateConfigFromJson()
+    appid, secretKey = config._getTranslateConfigFromJson()
     baiduTranslate = BaiduTranslate(appid, secretKey, 'auto', 'en')
     print(baiduTranslate('你好，世界！'))

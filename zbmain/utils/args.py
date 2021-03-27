@@ -7,6 +7,7 @@ import argparse
 
 parser = argparse.ArgumentParser()
 # ----set argument----
-parser.add_argument("-t","--train", action='store_true', default=False, help="Whether to run training.")
+parser.add_argument("-t", "--train", action='store_true', default=False, help="Whether to run training.")
+parser.add_argument("-n", "--num", default=0, type=int, help="num_Epoch or num_Iter")
 # ----set end----
 args = parser.parse_args()
